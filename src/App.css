@@ -1,0 +1,81 @@
+
+
+.link-white{
+  text-decoration:none;
+  color:rgb(209, 209, 209);
+}
+
+.link-white:hover{
+  color:white;
+}
+
+@keyframes daniel-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section-header{
+  scroll-margin-top: 75px;
+}
+
+.horiz-scroll{
+  overflow: scroll;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+
+.horiz-scroll.disabled {
+  scroll-snap-type: none;
+}
+
+.horiz-scroll >.scroll-item{
+  /* object-fit: cover;
+  object-position: 0% 50%; */
+  display: inline-block;
+  scroll-snap-align: start;
+  overflow-y: hidden;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.svgclass{ 
+  margin-left:-12.5vw; /*used to offset absolute positioning to center  -> svg class is w-1/4, so 25% of the screensize. So 12.5vw is half*/
+}
+
+.horiz-scroll::-webkit-scrollbar {/*needed to hide scrollbar on chrome*/
+  display: none;
+}
+
+.horiz-scroll{
+  scrollbar-width: none; /*needed to hide scrollbar on firefox*/
+}
+
+.scroll-wrapper{
+  height:60vh;
+  overflow-y: hidden;
+}
+
+@media (hover: none){
+  .custom-list>li>a{
+    text-decoration: underline;
+    color:blueviolet;
+  }
+}
+
+@media (hover: hover){
+  .custom-list>li>a:hover{
+    text-decoration: underline;
+    cursor:pointer;
+  }
+}
+
+
+

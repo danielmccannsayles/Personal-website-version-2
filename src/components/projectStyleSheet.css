@@ -1,0 +1,16 @@
+#shadow1{
+    box-shadow: -10px -10px #A78BFA; 
+    transition: box-shadow 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out;
+
+}
+
+/* #shadow1:hover{
+    box-shadow: -6vw -6vw #878282;
+    padding: 3rem; 
+} */
+
+.shadow-transform{
+    height:100vh;
+    width:100vw;
+}
