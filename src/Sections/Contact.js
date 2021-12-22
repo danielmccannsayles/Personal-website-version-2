@@ -11,7 +11,7 @@ function Contact() {
         Contact
       </h1>
       <div className="text-center mb-10 mt-10">
-        If you have any questions, comments, or ideas, about my current or past projects please reach out!<div> Send me a message on <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a></div>
+        If you have any questions, comments, or ideas about my current or past projects please reach out!<div> Send me a message on <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a></div>
       </div>
       
        <div className="w-80 mx-auto my-20">
