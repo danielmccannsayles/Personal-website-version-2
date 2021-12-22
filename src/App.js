@@ -43,12 +43,12 @@ class App extends React.Component {
 
   componentDidMount() {
     this._isMounted = true; //including this to prevent error: https://stackoverflow.com/questions/53949393/cant-perform-a-react-state-update-on-an-unmounted-component
-    if (window.innerWidth <733){
-      window.addEventListener('scroll', this.handleScroll); //if it's small screen the animation relies on unthrottled scroll
-    }
-    else{
+    // if (window.innerWidth <733){
+    //   window.addEventListener('scroll', this.handleScroll); //if it's small screen the animation relies on unthrottled scroll
+    // }
+    // else{
     window.addEventListener('scroll', this.handleScrollThrottled);
-    }
+    // }
     window.addEventListener('resize', this.handleResize);
   }
 
