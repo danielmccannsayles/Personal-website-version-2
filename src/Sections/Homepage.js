@@ -164,9 +164,9 @@ class HomePage extends React.Component {
 
     return (
       <>
-        <div  id="HomePage">
+        <div style={{height: window.innerHeight *(8.9/10)}} id="HomePage">
           <div className="bg-white relative scroll-wrapper"
-          style={{height:'496px'}}>
+          style={{height:window.innerHeight>800?'496px':'450px'}}>
             <div
               className="horiz-scroll w-full bg-white"
               ref={this.scrollRef}
@@ -299,12 +299,11 @@ class HomePage extends React.Component {
             </div>
           </div>
 
-          <div className="bg-white w-full py-4 px-2 md:px-10 " style={{height:((window.innerHeight*(9/10))-496 +'px')} }>
+          <div className="bg-white w-full py-4 px-2 md:px-10 flex " style={{height:((window.innerHeight*(9/10))-((window.innerHeight>800)?496:450) +'px')} }>
           {/* <div className="text-sm mx-auto">
               I'm A <span className="text-xl text-blue-500 font-bold">Student</span> at Santa Clara University, studying <span className=" text-green-500 font-bold">General Engineering</span> with a concentration in <span className=" text-red-500 font-bold">Design</span>
               </div> */}
-            <div className=" mt-20 flex gap-2 gap-10 lg:gap-20 w-full justify-center"
-            style={{marginTop:window.innerHeight<850?"1rem":window.innerHeight<900?"1.5rem":window.innerHeight<950?"4rem":"5rem"}}>
+            <div className="flex gap-2 gap-10 lg:gap-20 w-full justify-center my-auto">
               <div className=" m-x-6 ">
               <h1 className="text-xl text-red-500 underline text-center mb-1">Designer</h1>
                 <ul className="text-sm custom-list">
