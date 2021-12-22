@@ -61,8 +61,6 @@ function TextAnimation(props) {
       timeline.progress(0);
     }
     timeline.timeScale(props.timescale).play();
-
-    console.log(props.timescale);
     // if (play) {
     //   timeline.play();
     // } else {
