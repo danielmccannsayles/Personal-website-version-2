@@ -310,7 +310,7 @@ class HomePage extends React.Component {
                 <li><a target="_blank" href="https://www.figma.com/file/7GH6pfk1eta5mPU1VMaPiY/Rough-Draft?node-id=0%3A1">This website v.1: Wireframe</a></li>
                 <li><a target="_blank" href="https://www.figma.com/file/9hWHeBCK5nTLdfsUAQ0jDy/Version-2%3A-Graphics?node-id=0%3A1">This website v.2: Graphics</a></li>
                 <li><a target="_blank" href="https://www.figma.com/file/F9F8Y5P0C5NN1I7sYWPs0S/Version-2-Projects?node-id=0%3A1">This website v.2: Projects</a></li>
-                <li><a target="_blank" href="https://www.figma.com/file/UtHcw20eYlovLgkc3s2rNt/Rough-Drafts?node-id=0%3A1">Freelance for Dr. Binnall</a></li>
+                <li><a target="_blank" href="https://www.figma.com/file/UtHcw20eYlovLgkc3s2rNt/Rough-Drafts?node-id=0%3A1">Current Freelance Job</a></li>
                 <li><a target="_blank" href="https://www.figma.com/file/pMcYJyOjqnLQg74RGUq31P/Wireframe?node-id=0%3A1">Timer app Figma project</a></li>
                 <li><a target="_blank" href="https://www.scu.edu/engineering/academic-programs/department-of-computer-engineering/undergraduate/course-descriptions/">Coen 163: Web Usability(UX)</a></li>
               </ul>
