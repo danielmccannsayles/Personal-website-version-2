@@ -30,6 +30,9 @@ class App extends React.Component {
     let homePageSize = window.innerWidth<733?'small':window.innerWidth<1140?'medium':'large';
 
     this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0, scrollingDiv:0, screenSize:size, homePageScreenSize:homePageSize};
+    this.startingWidth=window.innerWidth;
+    //starting width is only ran once. IT should never be changed. It determines whether mobile view will be loaded
+    //It should improve the smoothness of the mobile version.
   }
 
   handleResize=()=>{ //arrow function needed since we use 'this' keyword
@@ -69,7 +72,7 @@ class App extends React.Component {
     return (
       <div style={{backgroundColor:'whitesmoke'}}> 
 
-        {this.state.homePageScreenSize == 'small'?<>
+        {this.startingWidth <733?<>
         <NavigationBarSmall
         height={this.state.yPos<fixAnimation?this.state.yPos/(5.38):75 +"px"}
         display={(this.state.yPos<fixAnimation|| window.innerWidth<768)?'none':'block'}
@@ -78,25 +81,21 @@ class App extends React.Component {
         </NavigationBarSmall> 
         
          <HomePageSmallScreen yPos={this.state.yPos}></HomePageSmallScreen>
-         </>:
+        </>:
+        <>
         <HomePage yPos={this.state.yPos} screenSize={this.state.screenSize} homePageScreenSize={this.state.homePageScreenSize}></HomePage>
-        }
-
-        {this.state.homePageScreenSize =='small'?'':
         <NavigationBar yPos={this.state.yPos} screenSize={this.state.screenSize}></NavigationBar>
-        }
+        
+        </>}
         
         {this.state.screenSize == 'large'?
         <CurrentProjectsLarge screenSize={this.state.screenSize}></CurrentProjectsLarge>:
         <CurrentProjects screenSize={this.state.screenSize}></CurrentProjects>
-
         }
-        <FinishedProjects screenSize={this.state.screenSize}></FinishedProjects>
 
+        <FinishedProjects screenSize={this.state.screenSize}></FinishedProjects>
         <About></About>
         <Contact></Contact>
-        {/* </Parallax> */}
-        
         
       </div>
     );
