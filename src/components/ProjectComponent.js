@@ -1,6 +1,5 @@
 import React from "react";
 import "./projectStyleSheet.css";
-import Modal from "./Modal";
 
 import LIFE from "../assets/LIFE.pdf";
 import SECONDCHANCES from "../assets/SECONDCHANCES.pdf";

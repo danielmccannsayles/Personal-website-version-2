@@ -58,7 +58,6 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
     window.removeEventListener('scroll', this.handleScrollThrottled);
-    window.removeEventListener('scroll', this.handleScroll);
   }
 
 
@@ -68,15 +67,14 @@ class App extends React.Component {
 
   
   render() {
-    let fixAnimation = (window.innerHeight/2); {/*I'm so dumb why did it take so long to think of this*/}
+    let fixAnimation = (window.innerHeight/2); 
     return (
       <div style={{backgroundColor:'whitesmoke'}}> 
 
         {this.startingWidth <733?<>
         <NavigationBarSmall
-        height={this.state.yPos<fixAnimation?this.state.yPos/(5.38):75 +"px"}
-        display={(this.state.yPos<fixAnimation|| window.innerWidth<768)?'none':'block'}
-        displayName={this.state.yPos<fixAnimation?'none':'block'}
+        height={this.state.yPos<30?"0px":"75px"}
+        displayName={this.state.yPos<fixAnimation?'none':'inline'}
         zBar={this.state.yPos>fixAnimation}>
         </NavigationBarSmall> 
         
@@ -88,7 +86,7 @@ class App extends React.Component {
         
         </>}
         
-        {this.state.screenSize == 'large'?
+        {this.state.screenSize === 'large'?
         <CurrentProjectsLarge screenSize={this.state.screenSize}></CurrentProjectsLarge>:
         <CurrentProjects screenSize={this.state.screenSize}></CurrentProjects>
         }

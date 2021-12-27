@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+
 gsap.registerPlugin(ScrollToPlugin);
 gsap.config({autoKillThreshold: 1}); //used to set auto kill threshhold
 
@@ -28,7 +29,7 @@ function NavigationBarSmall(props){
 
     return(
 
-        <div style={{height:props.height, position:'sticky', position: '-webkit-sticky', top:'0', zIndex:props.zBar?'100':'20', }} className="w-screen bg-black text-white sticky flex justify-center">
+        <div style={{height:props.height, position:'fixed', position: '-webkit-sticky', top:'0', zIndex:props.zBar?'100':'20'}} className="w-screen bg-black text-white sticky flex justify-center">
             <div style={inner} className="md:gap-10 flex ">
                 <button className="text-2xl text-white w-60 cursor-pointer" style={{display: props.displayName, }} onClick={()=>onNavigate()} >Daniel McCann-Sayles</button>
 
