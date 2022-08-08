@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a839697.css",
-    "main.js": "/static/js/main.dd37fe6a.js",
-    "static/js/787.cfd8f164.chunk.js": "/static/js/787.cfd8f164.chunk.js",
-    "static/media/SECONDCHANCES.pdf": "/static/media/SECONDCHANCES.57ec2dd510225b6cc68d.pdf",
-    "static/media/ThirdPlace.pdf": "/static/media/ThirdPlace.e7980af1e4938199a77c.pdf",
-    "static/media/DanielLarge.svg": "/static/media/DanielLarge.a0a95b1370dcc9adc3627618f14edada.svg",
-    "static/media/DanielMedium.svg": "/static/media/DanielMedium.7d7d20bdec94e290bd66060aa0c72cad.svg",
-    "static/media/LIFE.pdf": "/static/media/LIFE.0de3a7e78af28a72c085.pdf",
-    "static/media/DanielMS-Resume-Feb2022.pdf": "/static/media/DanielMS-Resume-Feb2022.632f8eb37a10756f2b0b.pdf",
-    "static/media/EngineerLarge.svg": "/static/media/EngineerLarge.668824a91681b32ee54d19b1ac46ebbe.svg",
-    "static/media/EngineerMedium.svg": "/static/media/EngineerMedium.86eecf4d8e5e791b2a22b5cbecf8a904.svg",
-    "static/media/DesignerLarge.svg": "/static/media/DesignerLarge.e7d5323c0c76146327089eae36488195.svg",
-    "static/media/DesignerMedium.svg": "/static/media/DesignerMedium.d6d96eb0d4b7e3db58d02e41c2db4384.svg",
-    "static/media/StudentMedium.svg": "/static/media/StudentMedium.ed7ef51211c6add833626a53a0325135.svg",
-    "static/media/StudentLarge.svg": "/static/media/StudentLarge.7b6eb921bee383046941e26852c7a045.svg",
-    "index.html": "/index.html",
-    "main.2a839697.css.map": "/static/css/main.2a839697.css.map",
-    "main.dd37fe6a.js.map": "/static/js/main.dd37fe6a.js.map",
-    "787.cfd8f164.chunk.js.map": "/static/js/787.cfd8f164.chunk.js.map"
+    "main.css": "./static/css/main.5ce8686e.css",
+    "main.js": "./static/js/main.a68b2f2c.js",
+    "static/js/787.cfd8f164.chunk.js": "./static/js/787.cfd8f164.chunk.js",
+    "static/media/SECONDCHANCES.pdf": "./static/media/SECONDCHANCES.57ec2dd510225b6cc68d.pdf",
+    "static/media/ThirdPlace.pdf": "./static/media/ThirdPlace.e7980af1e4938199a77c.pdf",
+    "static/media/DanielLarge.svg": "./static/media/DanielLarge.a0a95b1370dcc9adc3627618f14edada.svg",
+    "static/media/DanielMedium.svg": "./static/media/DanielMedium.7d7d20bdec94e290bd66060aa0c72cad.svg",
+    "static/media/LIFE.pdf": "./static/media/LIFE.0de3a7e78af28a72c085.pdf",
+    "static/media/DanielMS-Resume-August2022.pdf": "./static/media/DanielMS-Resume-August2022.57957c7bf4beebb2c076.pdf",
+    "static/media/EngineerLarge.svg": "./static/media/EngineerLarge.668824a91681b32ee54d19b1ac46ebbe.svg",
+    "static/media/EngineerMedium.svg": "./static/media/EngineerMedium.86eecf4d8e5e791b2a22b5cbecf8a904.svg",
+    "static/media/DesignerLarge.svg": "./static/media/DesignerLarge.e7d5323c0c76146327089eae36488195.svg",
+    "static/media/DesignerMedium.svg": "./static/media/DesignerMedium.d6d96eb0d4b7e3db58d02e41c2db4384.svg",
+    "static/media/StudentMedium.svg": "./static/media/StudentMedium.ed7ef51211c6add833626a53a0325135.svg",
+    "static/media/StudentLarge.svg": "./static/media/StudentLarge.7b6eb921bee383046941e26852c7a045.svg",
+    "index.html": "./index.html",
+    "main.5ce8686e.css.map": "./static/css/main.5ce8686e.css.map",
+    "main.a68b2f2c.js.map": "./static/js/main.a68b2f2c.js.map",
+    "787.cfd8f164.chunk.js.map": "./static/js/787.cfd8f164.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a839697.css",
-    "static/js/main.dd37fe6a.js"
+    "static/css/main.5ce8686e.css",
+    "static/js/main.a68b2f2c.js"
   ]
 }
