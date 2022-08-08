@@ -1,43 +1,15 @@
 import React from "react";
 import "./projectStyleSheet.css";
 
-import LIFE from "../assets/LIFE.pdf";
-import SECONDCHANCES from "../assets/SECONDCHANCES.pdf";
-import THIRDPLACE from "../assets/ThirdPlace.pdf";
-
-function ProjectComponent(props) {
+function  ProjectComponent(props) {
   //expecting a 
   //add a state hook here that says if its mobile or not. On the small screen I want to display less words in general, and pass the modal a shorter/abbreviated version.
   const clicked = (props.active == props.specialId)
-
-  
-  const footnotes = props.links.map((row, index) => {
-    return (
-      <li key={index}>
-        <a
-          key={index}
-          target="_blank"
-          className="sm:text-gray-400 sm:hover:text-white inline-flex underline sm:no-underline"
-          href={
-            row[0] === "LIFE"
-              ? LIFE
-              : row[0] === "SECONDCHANCES"
-              ? SECONDCHANCES
-              : row[0] === "THIRDPLACE"
-              ? THIRDPLACE
-              : row[0] //check if it's a pdf, otherwise it's just the normal link
-          }
-        >
-          {index + 1}. {row[1]}{" "}
-        </a>
-      </li>
-    );
-  });
   
   let left=(props.active ==1 && !props.medium)? "220px": (props.active ==3 && !props.medium)?"42px":"137px";
 
   //this janky solution is for when theres one project component on it's own, and the triangle needs to face up
-  let triangleStyle = (props.active==3 && props.medium==true)?
+  let triangleStyle = props.faceUp?
   {top: "-52px", //set this to height of triangle plus border offset
     left: "137px", //187 - 50px 
     width: 0,
@@ -77,11 +49,7 @@ function ProjectComponent(props) {
 
         <div className="divide-y-2">
           <h1 className="text-xl m-1 text-center">{props.title}</h1>
-          <p className="pt-2 ">
-            {props.screenSize == "small" &&
-              props.text.substring(0, 178) +
-                (clicked? props.text.substring(179, props.text.length): ".. [View More]") }
-              
+          <p className="pt-2 " style={{ whiteSpace: "pre-wrap" }}>
                 {props.screenSize != "small" &&
               props.text.substring(0, 178) +
                 (clicked? '        ':".. [View More]") }

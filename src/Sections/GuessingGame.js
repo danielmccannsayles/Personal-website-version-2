@@ -109,19 +109,25 @@ class GuessingGame extends React.Component {
   }
 
   render() {
+    let colorsList = {green: '#4ADE80', blue: '#60A5FA', purple: '#C084FC', red: '#FB7185'}
     const map1 = this.state.questionBank[
       this.state.currentQuestion
     ].answers.map((item, j) => {
+      //if question two, set cool colors
+      let color = this.state.questionBank[
+        this.state.currentQuestion].questionId == '102'?(colorsList[item.toLowerCase()]):colorsList.blue;
+      let selected = this.state.selectedAnswer[this.state.currentQuestion] == item;
       return (
         <button
           key={item}
           value={item}
           onClick={this.handleChoice}
           className={
-            item == this.state.selectedAnswer[this.state.currentQuestion]
-              ? "m-2 border-green-500 border-2 p-2 rounded-md cursor-pointer"
-              : " m-2 border-red-500 border-2 p-2 rounded-md cursor-pointer"
+            selected
+              ? `m-2 p-2 rounded-md cursor-pointer text-white`
+              : `m-2 p-2 rounded-md cursor-pointer`
           }
+          style={{backgroundColor:selected?color:'', border: `2px solid ${color}`}}
         >
           {" "}
           {item}{" "}
@@ -133,14 +139,14 @@ class GuessingGame extends React.Component {
       <div className="p-4" style={{ width: "400px" }}>
         <h1 className="mb-4 text-center text-purple-500 ">About Me</h1>
         <p className="text-center">
-          Hi! I study General Engineering with a concentration in Design at Santa Clara University, and I'm planning to graduate in 2023. Some interests of mine are web design/programming, making music, and reading... but enough 'About Me'.
+          Hi! I study General Engineering with a concentration in Design Thinking at Santa Clara University, and I'm planning to graduate in 2023. Some interests of mine are web design/programming, playing spikeball, and reading... but enough 'About Me'.
          
         </p>
         <p className="text-center mt-4">  These sections are often boring so I made mine an interactive
           quiz. Answer these totally unbiased questions to see how similar we are!
           </p>
         {!this.state.quizFinished ? (
-          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4" style={{ width: "340px" }}>
+          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4 mx-auto" style={{ width: "340px" }}>
             <div>
               Question {this.state.currentQuestion + 1} /{" "}
               {this.state.questionBank.length}
@@ -156,8 +162,8 @@ class GuessingGame extends React.Component {
                 onClick={this.prevQuestion}
                 className={
                   this.state.currentQuestion == 0
-                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l opacity-50 cursor-not-allowed"
-                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l"
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-l opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-l"
                 }
               >
                 {" "}
@@ -168,8 +174,8 @@ class GuessingGame extends React.Component {
                 className={
                   this.state.selectedAnswer[this.state.currentQuestion] == "" ||
                   this.state.currentQuestion == 9
-                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
-                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-r"
                 }
               >
                 {" "}
@@ -181,8 +187,8 @@ class GuessingGame extends React.Component {
             {this.state.currentQuestion == 9 && (
               <button onClick={this.calculateScore} className={
                   this.state.selectedAnswer[this.state.currentQuestion] == ""
-                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
-                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded-r"
                 }> Calculate</button>
             )}
           </div>
@@ -194,7 +200,7 @@ class GuessingGame extends React.Component {
             
             </div>
             <div> You should hire me!</div>
-            <button className="bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded" onClick={this.resetGame}>Play Again</button>
+            <button className="bg-yellow-300 hover:bg-yellow-500 text-yellow 700 py-2 px-4 rounded" onClick={this.resetGame}>Play Again</button>
           </div>
         )}
       </div>

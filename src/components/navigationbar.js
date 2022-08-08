@@ -37,7 +37,6 @@ function NavigationBar(props){
     }
 
     function onNavigate(string){
-        console.log(string);
         let yOffset=80;
         if (string ==='#Homepage')
             yOffset=0;
@@ -55,7 +54,7 @@ function NavigationBar(props){
             </p>
             <div style={innerNav} className="md:gap-10 flex ">
                 <button className="text-xl link-white cursor-pointer" style={{display: displayNav, }} onClick={()=>onNavigate("#CurrentProjects")} >Current</button>
-                <button className="text-xl link-white cursor-pointer" style={{display: displayNav, }} onClick={()=>onNavigate("#FinishedProjects")}>Finished</button>
+                <button className="text-xl link-white cursor-pointer" style={{display: displayNav, }} onClick={()=>onNavigate("#FinishedProjects")}>Past</button>
                 <button className="text-2xl text-white w-60 cursor-pointer" style={{display: displayName, }} onClick={()=>onNavigate("#HomePage")} >Daniel McCann-Sayles</button>
                 <button className="text-xl link-white cursor-pointer" style={{display: displayNav, }} onClick={()=>onNavigate("#AboutMe")}>About</button>
                 <button className="text-xl link-white cursor-pointer" style={{display: displayNav, }} onClick={()=>onNavigate("#Contact")}>Contact</button>

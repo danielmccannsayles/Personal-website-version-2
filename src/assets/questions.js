@@ -8,17 +8,17 @@ const qBank = [
       },
       {
         question:
-          "Which color is the best?",
-        answers: ["Green", "Blue", "Purple", "Red"],
-        correct: "Green",
-        questionId: "102"
-      },
-      {
-        question:
           "Which genre is better?",
         answers: ["Fantasy", "Sci-Fi"],
         correct: "Fantasy",
         questionId: "103"
+      },
+      {
+        question:
+          "Which color is the best?",
+        answers: ["Green", "Blue", "Purple", "Red"],
+        correct: "Green",
+        questionId: "102"
       },
       {
         question:
