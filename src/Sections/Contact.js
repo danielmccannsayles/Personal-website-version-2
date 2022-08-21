@@ -1,5 +1,5 @@
 import favicon from "../assets/favicon.png"
-import Resume from "../assets/DanielMS-Resume-August2022.pdf"
+import Resume from "../assets/DanielMS_Resume_August2022.pdf"
 
 function Contact() {
   return (
